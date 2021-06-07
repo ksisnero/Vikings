@@ -25,7 +25,7 @@ namespace Vikings.UserControls.Views
                 mainWindow.DataContext = mainWindowViewModel;
 
                 Application.Current.MainWindow = mainWindow;
-                mainWindow.ShowDialog();
+                mainWindow.Show();
             }
         }
 

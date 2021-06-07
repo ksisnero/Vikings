@@ -53,7 +53,7 @@ namespace Vikings.UserControls.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Vikings;V1.0.0.0;component/usercontrols/views/weapontypereference.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Vikings;component/usercontrols/views/weapontypereference.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\UserControls\Views\WeaponTypeReference.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
