@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "I/oWlyWqsAn0RiRXOtZP9Zta55dW1c06QRc00KKYKLpS682SSDFouaZFMwmcxiqHN5HJHUWE2FjNV9QFiGD22g==",
+  "success": true,
+  "projectFilePath": "D:\\Desktop\\Vikings\\Vikings.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Karina\\.nuget\\packages\\microsoft.netcore.app\\2.2.8\\microsoft.netcore.app.2.2.8.nupkg.sha512",
+    "C:\\Users\\Karina\\.nuget\\packages\\microsoft.netcore.dotnetapphost\\2.2.8\\microsoft.netcore.dotnetapphost.2.2.8.nupkg.sha512",
+    "C:\\Users\\Karina\\.nuget\\packages\\microsoft.netcore.dotnethostpolicy\\2.2.8\\microsoft.netcore.dotnethostpolicy.2.2.8.nupkg.sha512",
+    "C:\\Users\\Karina\\.nuget\\packages\\microsoft.netcore.dotnethostresolver\\2.2.8\\microsoft.netcore.dotnethostresolver.2.2.8.nupkg.sha512",
+    "C:\\Users\\Karina\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.2\\microsoft.netcore.platforms.5.0.2.nupkg.sha512",
+    "C:\\Users\\Karina\\.nuget\\packages\\microsoft.netcore.targets\\5.0.0\\microsoft.netcore.targets.5.0.0.nupkg.sha512",
+    "C:\\Users\\Karina\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Karina\\.nuget\\packages\\system.runtime\\4.3.1\\system.runtime.4.3.1.nupkg.sha512"
+  ],
+  "logs": []
+}

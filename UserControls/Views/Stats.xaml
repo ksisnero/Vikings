@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="Vikings.UserControls.Views.Stats"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Vikings.UserControls.Views"
+             mc:Ignorable="d" 
+             Background="White">
+    <Grid>
+        <StackPanel>
+            <Label Content="Stats (cap 10)" BorderBrush="Black" BorderThickness="1" Background="#FF76A5AF" HorizontalContentAlignment="Center"/>
+            <WrapPanel>
+                <StackPanel Orientation="Vertical" Width="97" >
+                    <!--Strength-->
+                    <Label Content="Strength" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FF6FA8DC" Margin="0,-1,0,0"/>
+                    <TextBox TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Text="1" Margin="0,-1,0,0"/>
+                    <TextBox TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Text="1" Margin="0,-1,0,0"/>
+                    <TextBox TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Text="1" Margin="0,-1,0,0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Width="97">
+                    <!--Dexerity-->
+                    <Label Content="Dexerity" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FF6FA8DC" Margin="-1,-1,0,0"/>
+                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Width="97">
+                    <!--Constitution-->
+                    <Label Content="Constitution" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FF6FA8DC" Margin="-1,-1,0,0"/>
+                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Width="97">
+                    <!--Intellegence-->
+                    <Label Content="Intellegence" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FF6FA8DC" Margin="-1,-1,0,0"/>
+                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Width="97">
+                    <!--Perception-->
+                    <Label Content="Perception" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FF6FA8DC" Margin="-1,-1,0,0"/>
+                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Width="97">
+                    <!--Charisma-->
+                    <Label Content="Charisma" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FF6FA8DC" Margin="-1,-1,0,0"/>
+                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Width="97">
+                    <!--Appearance-->
+                    <Label Content="Appearance" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FF6FA8DC" Margin="-1,-1,0,0"/>
+                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Width="97">
+                    <!--Stat Points-->
+                    <Label Content="Stat Points" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" FontWeight="Bold" Background="#FF45818E" Margin="-1,-1,0,0"/>
+                    <TextBox Text="Spend 10" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Background="#FF6FA8DC" Margin="-1,-1,0,0"/>
+                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0" IsReadOnly="True"/>
+                </StackPanel>
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Vikings.UserControls.Views.Equipment"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Vikings.UserControls.Views"
+             mc:Ignorable="d" 
+             Background="White">
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="308"  VerticalAlignment="Top" Width="175" Source="/UserControls/Views/Resources/unnamed.png" Margin="50,57,0,0"/>
+        <Rectangle HorizontalAlignment="Left" Height="1" Margin="149,78,0,0" Stroke="Black" VerticalAlignment="Top" Width="140"/>
+        <Rectangle HorizontalAlignment="Left" Height="1" Margin="149,159,0,0" Stroke="Black" VerticalAlignment="Top" Width="140"/>
+        <Rectangle HorizontalAlignment="Left" Height="1" Margin="149,287,0,0" Stroke="Black" VerticalAlignment="Top" Width="140"/>
+        <Rectangle HorizontalAlignment="Left" Height="1" Margin="180,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="109"/>
+        <Rectangle HorizontalAlignment="Left" Height="1" Margin="149,346,0,0" Stroke="Black" VerticalAlignment="Top" Width="140"/>
+        <Rectangle HorizontalAlignment="Left" Height="1" Margin="180,232,0,0" Stroke="Black" VerticalAlignment="Top" Width="109"/>
+        
+        <ComboBox HorizontalAlignment="Left" Margin="289,68,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox HorizontalAlignment="Left" Margin="289,149,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox HorizontalAlignment="Left" Margin="289,190,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox HorizontalAlignment="Left" Margin="289,222,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox HorizontalAlignment="Left" Margin="289,277,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox HorizontalAlignment="Left" Margin="289,336,0,0" VerticalAlignment="Top" Width="120"/>
+        
+        <Button Content="Add Equipment" HorizontalAlignment="Left" Margin="32,407,0,0" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="27" Margin="417,66,0,0" VerticalAlignment="Top" Width="24" Source="/UserControls/Views/Resources/outline_info_black_24dp.png"/>
+
+    </Grid>
+</UserControl>
