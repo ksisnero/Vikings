@@ -6,74 +6,113 @@
              xmlns:local="clr-namespace:Vikings.UserControls.Views"
              mc:Ignorable="d" 
              Background="White">
+
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Strength" VerticalAlignment="Top"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="Dexerity" VerticalAlignment="Top" Grid.Row="1"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="Constitution" VerticalAlignment="Top" Grid.Row="2"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="Intellegence" VerticalAlignment="Top" Grid.Row="3"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="Perception" VerticalAlignment="Top" Grid.Row="4"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="Charisma" VerticalAlignment="Top" Grid.Row="5"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="5" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="Appearance" VerticalAlignment="Top" Grid.Row="6"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="6" Padding="8,5,8,5" Margin="2"/>
+    </Grid>
+    
+    <!--<Grid>
         <StackPanel>
             <Label Content="Stats (cap 10)" BorderBrush="Black" BorderThickness="1" Background="#FF76A5AF" HorizontalContentAlignment="Center"/>
             <WrapPanel>
                 <StackPanel Orientation="Vertical" Width="97" >
-                    <!--Strength-->
+                    --><!--Strength--><!--
                     <Label Content="Strength" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FF6FA8DC" Margin="0,-1,0,0"/>
-                    <TextBox TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Text="1" Margin="0,-1,0,0"/>
-                    <TextBox TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Text="1" Margin="0,-1,0,0"/>
-                    <TextBox TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Text="1" Margin="0,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Strength.BaseStatPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="0,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Strength.StatModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="0,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Strength.TotalStatPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="0,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Dexerity-->
+                    --><!--Dexerity--><!--
                     <Label Content="Dexerity" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FF6FA8DC" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Dexerity.BaseStatPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Dexerity.StatModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Dexerity.TotalStatPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Constitution-->
+                    --><!--Constitution--><!--
                     <Label Content="Constitution" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FF6FA8DC" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Constitution.BaseStatPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Constitution.StatModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Constitution.TotalStatPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Intellegence-->
+                    --><!--Intellegence--><!--
                     <Label Content="Intellegence" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FF6FA8DC" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Intellegence.BaseStatPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Intellegence.StatModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Intellegence.TotalStatPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Perception-->
+                    --><!--Perception--><!--
                     <Label Content="Perception" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FF6FA8DC" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Perception.BaseStatPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Perception.StatModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Perception.TotalStatPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Charisma-->
+                    --><!--Charisma--><!--
                     <Label Content="Charisma" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FF6FA8DC" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Charisma.BaseStatPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Charisma.StatModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Charisma.TotalStatPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Appearance-->
+                    --><!--Appearance--><!--
                     <Label Content="Appearance" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FF6FA8DC" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Appearance.BaseStatPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Appearance.StatModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.Appearance.TotalStatPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Stat Points-->
+                    --><!--Stat Points--><!--
                     <Label Content="Stat Points" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" FontWeight="Bold" Background="#FF45818E" Margin="-1,-1,0,0"/>
                     <TextBox Text="Spend 10" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Background="#FF6FA8DC" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Stats.StatPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                     <TextBox TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0" IsReadOnly="True"/>
                 </StackPanel>
             </WrapPanel>
         </StackPanel>
-    </Grid>
+    </Grid>-->
 </UserControl>

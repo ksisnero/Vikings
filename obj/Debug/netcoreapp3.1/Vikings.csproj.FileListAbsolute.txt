@@ -41,4 +41,8 @@ D:\Desktop\Vikings\obj\Debug\netcoreapp3.1\UserControls\Views\WeaponRangeReferen
 D:\Desktop\Vikings\obj\Debug\netcoreapp3.1\UserControls\Views\WeaponTypeReference.baml
 D:\Desktop\Vikings\obj\Debug\netcoreapp3.1\WelcomeWindow.g.cs
 D:\Desktop\Vikings\obj\Debug\netcoreapp3.1\WelcomeWindow.baml
+D:\Desktop\Vikings\obj\Debug\netcoreapp3.1\App.baml
+D:\Desktop\Vikings\bin\Debug\netcoreapp3.1\Microsoft.Toolkit.dll
+D:\Desktop\Vikings\bin\Debug\netcoreapp3.1\Microsoft.Toolkit.Parsers.dll
+D:\Desktop\Vikings\obj\Debug\netcoreapp3.1\Vikings.csproj.CopyComplete
 D:\Desktop\Vikings\obj\Debug\netcoreapp3.1\Vikings.csprojAssemblyReference.cache

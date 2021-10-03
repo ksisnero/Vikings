@@ -12,9 +12,9 @@ TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 D:\Desktop\Vikings\App.xaml
 13535408278
 
-46-367252677
-1921654412462
+47-1654859364
+194-1240342632
 MainWindow.xaml;UserControls\Views\ArmorReference.xaml;UserControls\Views\AvailableAbilities.xaml;UserControls\Views\Equipment.xaml;UserControls\Views\Inventory.xaml;UserControls\Views\InventoryItemWindow.xaml;UserControls\Views\LearnedAbilites.xaml;UserControls\Views\PlayerInformation.xaml;UserControls\Views\Skills.xaml;UserControls\Views\Stats.xaml;UserControls\Views\WeaponRangeReference.xaml;UserControls\Views\WeaponTypeReference.xaml;WelcomeWindow.xaml;
 
-False
+True
 

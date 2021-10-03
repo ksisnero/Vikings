@@ -193,6 +193,27 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.Toolkit/7.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/Microsoft.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Toolkit.dll": {}
+        }
+      },
+      "Microsoft.Toolkit.Parsers/6.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Toolkit": "6.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Toolkit.Parsers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Toolkit.Parsers.dll": {}
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -563,6 +584,45 @@
         "version.txt"
       ]
     },
+    "Microsoft.Toolkit/7.0.2": {
+      "sha512": "LaGLOfMz1ZcfR6ex4Cc2CzSFuyGTApIvSyZZmJqjiGZY5zZoqwPN1IpQUI2R0vbWDhA4VPBfiGMZR9NdgUbT4Q==",
+      "type": "package",
+      "path": "microsoft.toolkit/7.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "images/nuget.png",
+        "lib/net5.0/Microsoft.Toolkit.dll",
+        "lib/net5.0/Microsoft.Toolkit.pdb",
+        "lib/net5.0/Microsoft.Toolkit.xml",
+        "lib/netstandard1.4/Microsoft.Toolkit.dll",
+        "lib/netstandard1.4/Microsoft.Toolkit.pdb",
+        "lib/netstandard1.4/Microsoft.Toolkit.xml",
+        "lib/netstandard2.0/Microsoft.Toolkit.dll",
+        "lib/netstandard2.0/Microsoft.Toolkit.pdb",
+        "lib/netstandard2.0/Microsoft.Toolkit.xml",
+        "lib/netstandard2.1/Microsoft.Toolkit.dll",
+        "lib/netstandard2.1/Microsoft.Toolkit.pdb",
+        "lib/netstandard2.1/Microsoft.Toolkit.xml",
+        "license.md",
+        "microsoft.toolkit.7.0.2.nupkg.sha512",
+        "microsoft.toolkit.nuspec"
+      ]
+    },
+    "Microsoft.Toolkit.Parsers/6.1.1": {
+      "sha512": "t7olz/2604GyMzOJrgGPi2kK3ixXhPEA2/IAcQG2QHENfTjK/COH3dPm6tthD3+Caj/nSX8wfZIwymOcGM9iAQ==",
+      "type": "package",
+      "path": "microsoft.toolkit.parsers/6.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Toolkit.Parsers.dll",
+        "lib/netstandard2.0/Microsoft.Toolkit.Parsers.pdb",
+        "lib/netstandard2.0/Microsoft.Toolkit.Parsers.xml",
+        "microsoft.toolkit.parsers.6.1.1.nupkg.sha512",
+        "microsoft.toolkit.parsers.nuspec"
+      ]
+    },
     "NETStandard.Library/2.0.3": {
       "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "type": "package",
@@ -790,6 +850,8 @@
       "Microsoft.NETCore.App >= 2.2.8",
       "Microsoft.NETCore.Platforms >= 5.0.2",
       "Microsoft.NETCore.Targets >= 5.0.0",
+      "Microsoft.Toolkit >= 7.0.2",
+      "Microsoft.Toolkit.Parsers >= 6.1.1",
       "System.Runtime >= 4.3.1"
     ]
   },
@@ -848,6 +910,14 @@
           "Microsoft.NETCore.Targets": {
             "target": "Package",
             "version": "[5.0.0, )"
+          },
+          "Microsoft.Toolkit": {
+            "target": "Package",
+            "version": "[7.0.2, )"
+          },
+          "Microsoft.Toolkit.Parsers": {
+            "target": "Package",
+            "version": "[6.1.1, )"
           },
           "System.Runtime": {
             "target": "Package",

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Vikings.UserControls.Objects
+﻿namespace Vikings.UserControls.Objects
 {
     public class Stat
     {

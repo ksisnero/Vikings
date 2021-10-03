@@ -1,4 +1,5 @@
-﻿using Vikings.UserControls.Objects;
+﻿using Vikings.UserControls.Helpers;
+using Vikings.UserControls.Objects;
 
 namespace Vikings.UserControls.MockApi
 {
@@ -8,6 +9,10 @@ namespace Vikings.UserControls.MockApi
 
         public void SavePlayerFile(PlayerFile player)
         {
+            var xmlHelper = new XmlFileHelper();
+            var xmlString = xmlHelper.SerializePlayerFileToXml(player);
+            xmlHelper.SaveXmlFile(xmlString);
+
             Player = player;
         }
 

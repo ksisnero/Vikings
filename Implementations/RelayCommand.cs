@@ -3,11 +3,11 @@ using System.Windows.Input;
 
 namespace Vikings.Implementations
 {
-    //FROM: https://docs.microsoft.com/en-us/archive/msdn-magazine/2009/february/patterns-wpf-apps-with-the-model-view-viewmodel-design-pattern
     public class RelayCommand : ICommand
     {
         private readonly Predicate<object> _canExecute;
         private readonly Action<object> _execute;
+        private bool _canExecuteCache = true;
 
         public RelayCommand(Predicate<object> canExecute, Action<object> execute)
         {
@@ -15,15 +15,23 @@ namespace Vikings.Implementations
             _execute = execute;
         }
 
-        public event EventHandler CanExecuteChanged
+        public RelayCommand(Action<object> executeAction)
         {
-            add => CommandManager.RequerySuggested += value;
-            remove => CommandManager.RequerySuggested -= value;
+            _execute = executeAction;
         }
+
+        public event EventHandler CanExecuteChanged;
 
         public bool CanExecute(object parameter)
         {
-            return _canExecute(parameter);
+            if (_canExecute == null) return _canExecuteCache;
+            var temp = _canExecute(parameter);
+
+            if (_canExecuteCache == temp) return _canExecuteCache;
+            _canExecuteCache = temp;
+
+            CanExecuteChanged?.Invoke(this, new EventArgs());
+            return _canExecuteCache;
         }
 
         public void Execute(object parameter)
