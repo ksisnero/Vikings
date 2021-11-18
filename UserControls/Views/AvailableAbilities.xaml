@@ -2,30 +2,35 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Vikings.UserControls.Views"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" 
              d:DesignHeight="450">
 
     <Grid>
         <StackPanel Orientation="Vertical">
-            <Label Content="Available Abilities" Background="#FFEAD1DC" BorderBrush="Black" BorderThickness="1" Margin="0,0,0,-2" />
-            <DataGrid Background="#FFF4CCCC" BorderBrush="Black" Margin="0,-1,0,0">
+            <Grid>
+                <Label Content="Available Abilities" Background="#FFEAD1DC" BorderBrush="Black" BorderThickness="1" Margin="0,0,0,-2" />
+                <Button Content="Add Ability File" Command="{Binding AddAbilityFileCommand, NotifyOnSourceUpdated=True}" HorizontalAlignment="Right" Margin="5" Padding="5"/>
+            </Grid>
+            
+            <DataGrid Background="#FFF4CCCC" BorderBrush="Black" Margin="0,-1,0,0" ItemsSource="{Binding Abilities}" AutoGenerateColumns="False" IsReadOnly="True" CanUserResizeRows="False" RowHeaderWidth="0">
                 <DataGrid.Resources>
                     <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
                         <Setter Property="Background" Value="#FFF4CCCC"/>
                         <Setter Property="BorderBrush" Value="Black"/>
                         <Setter Property="BorderThickness" Value="0.5"/>
                         <Setter Property="Padding" Value="5"/>
-                        <Setter Property="Width" Value="100"/>
+                        <Setter Property="MinWidth" Value="100"/>
+                        <Setter Property="Width" Value="Auto"/>
+                        <Setter Property="Margin" Value="-1,-1,0,0"/>
                     </Style>
                 </DataGrid.Resources>
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Ability"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Range"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Description"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Energy Cost"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Ability Required"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Ability" Binding="{Binding AbilityName}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Range" Binding="{Binding AbilityRange}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Description" Binding="{Binding AbilityDescription}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Energy Cost" Binding="{Binding RequiredMinimalEnergy}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Ability Required" Binding="{Binding RequiredLevel}"></DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>

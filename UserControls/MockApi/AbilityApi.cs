@@ -49,6 +49,70 @@ namespace Vikings.UserControls.Database
                     RequiredLevel = 1,
                     RequiredMinimalEnergy = 50
                 },
+                new Ability
+                {
+                    AbilityName = "Chilling Wind",
+                    AbilityDescription = "+50 Freeze",
+                    AbilityRange = 2,
+                    RequiredLevel = 1,
+                    RequiredMinimalEnergy = 50
+                },
+                new Ability
+                {
+                    AbilityName = "Intense Light",
+                    AbilityDescription = "+50 Paralyze",
+                    AbilityRange = 2,
+                    RequiredLevel = 1,
+                    RequiredMinimalEnergy = 50
+                },
+                new Ability
+                {
+                    AbilityName = "Cut",
+                    AbilityDescription = "+50 Bleeding",
+                    AbilityRange = 2,
+                    RequiredLevel = 1,
+                    RequiredMinimalEnergy = 50
+                },
+                new Ability
+                {
+                    AbilityName = "Alchemy",
+                    AbilityDescription = "Item -> 1 GP",
+                    AbilityRange = 0,
+                    RequiredLevel = 1,
+                    RequiredMinimalEnergy = 100
+                },
+                new Ability
+                {
+                    AbilityName = "ShieldMaiden",
+                    AbilityDescription = "(Reactive) Block ability heading tword ally",
+                    AbilityRange = 2,
+                    RequiredLevel = 1,
+                    RequiredMinimalEnergy = 100
+                },
+                new Ability
+                {
+                    AbilityName = "Illuminate",
+                    AbilityDescription = "Create Light Orb in Hand",
+                    AbilityRange = 0,
+                    RequiredLevel = 1,
+                    RequiredMinimalEnergy = 100
+                },
+                new Ability
+                {
+                    AbilityName = "Reinforce",
+                    AbilityDescription = "Tame Animal (2 Spaces)",
+                    AbilityRange = 2,
+                    RequiredLevel = 1,
+                    RequiredMinimalEnergy = 100
+                },
+                new Ability
+                {
+                    AbilityName = "Fear",
+                    AbilityDescription = "Cause target to run 2 spaces",
+                    AbilityRange = 3,
+                    RequiredLevel = 1,
+                    RequiredMinimalEnergy = 100
+                },
             };
         }
 

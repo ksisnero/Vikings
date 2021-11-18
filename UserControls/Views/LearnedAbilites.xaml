@@ -8,8 +8,12 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel Orientation="Vertical">
-            <Label Content="Learned Abilities" Background="#FFEAD1DC" BorderBrush="Black" BorderThickness="1" Margin="0,0,0,-2" />
-            <DataGrid Background="#FFF4CCCC" BorderBrush="Black" Margin="0,-1,0,0">
+            <Grid>
+                <Label Content="Learned Abilities" Background="#FFEAD1DC" BorderBrush="Black" BorderThickness="1" Margin="0,0,0,-2" />
+                <Button Content="Add Ability File" Command="{Binding AddAbilityFileCommand, NotifyOnSourceUpdated=True}" HorizontalAlignment="Right" Margin="5" Padding="5"/>
+            </Grid>
+
+            <DataGrid Background="#FFF4CCCC" BorderBrush="Black" Margin="0,-1,0,0" ItemsSource="{Binding Abilities}" AutoGenerateColumns="False" IsReadOnly="True" CanUserResizeRows="False" RowHeaderWidth="0">
                 <DataGrid.Resources>
                     <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
                         <Setter Property="Background" Value="#FFF4CCCC"/>
@@ -20,11 +24,11 @@
                     </Style>
                 </DataGrid.Resources>
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Ability"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Range"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Description"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Energy Cost"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Ability Required"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Ability" Binding="{Binding AbilityName}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Range" Binding="{Binding AbilityRange}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Description" Binding="{Binding AbilityDescription}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Energy Cost" Binding="{Binding RequiredMinimalEnergy}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Ability Required" Binding="{Binding RequiredLevel}"></DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>       

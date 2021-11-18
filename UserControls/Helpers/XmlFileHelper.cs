@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
 using Vikings.UserControls.Objects;
@@ -7,7 +8,7 @@ namespace Vikings.UserControls.Helpers
 {
     public class XmlFileHelper
     {
-        public string SerializeToXml(PlayerFile playerFile)
+        public string SerializePlayerFileToXml(PlayerFile playerFile)
         {
             XmlSerializer xmlSerializer = new XmlSerializer(playerFile.GetType());
             string result = string.Empty;
@@ -21,7 +22,7 @@ namespace Vikings.UserControls.Helpers
             return result;
         }
 
-        public PlayerFile ReadFromXml(string filePath)
+        public PlayerFile ReadPlayerFileFromXml(string filePath)
         {
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(PlayerFile));
             PlayerFile player;
@@ -31,6 +32,18 @@ namespace Vikings.UserControls.Helpers
                 player = (PlayerFile)xmlSerializer.Deserialize(reader);
             }
             return player;
+        }
+
+        public List<Ability> ReadAbilitiesFromXml(string filePath)
+        {
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Ability>));
+            List<Ability> abilities;
+
+            using (StreamReader reader = new StreamReader(filePath))
+            {
+                abilities = (List<Ability>)xmlSerializer.Deserialize(reader);
+            }
+            return abilities;
         }
 
         public void SaveXmlFile(string xmlString)

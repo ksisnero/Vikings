@@ -17,7 +17,21 @@
         </Grid.RowDefinitions>
         
         <Label Grid.ColumnSpan="3" Content="Inventory" HorizontalAlignment="Stretch" Background="#FFCCCCCC" BorderBrush="Black" BorderThickness="1" HorizontalContentAlignment="Center"/>
-        <Button Grid.Column="2" Content="Add" HorizontalAlignment="Right" VerticalAlignment="Center" Padding="15,1,15,1" Margin="5"/>
-        <DataGrid Grid.Row="1" Grid.ColumnSpan="3" ItemsSource="{Binding Inventory}" BorderBrush="Black" BorderThickness="1" Margin="0,-1,0,0"/>
+        <Button Grid.Column="2" Command="{Binding AddItemCommand}" Content="Add" HorizontalAlignment="Right" VerticalAlignment="Center" Padding="15,1,15,1" Margin="5"/>
+        <DataGrid Grid.Row="1" Grid.ColumnSpan="3" ItemsSource="{Binding Inventory, NotifyOnSourceUpdated=True}" BorderBrush="Black" BorderThickness="1" Margin="0,-1,0,0"
+                   AutoGenerateColumns="False" IsReadOnly="True" CanUserResizeRows="False" RowHeaderWidth="0" Width="Auto">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Item Name" Binding="{Binding ItemName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Notes" Binding="{Binding Notes}"></DataGridTextColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Edit" Padding="5" Width="100"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </UserControl>

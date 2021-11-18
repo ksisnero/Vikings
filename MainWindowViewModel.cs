@@ -1,4 +1,5 @@
-﻿using Vikings.UserControls.ViewModels;
+﻿using System;
+using Vikings.UserControls.ViewModels;
 using Vikings.UserControls.Views;
 
 namespace Vikings
@@ -7,7 +8,11 @@ namespace Vikings
     {
         public MainWindowViewModel()
         {
+            initializeViewModels();
+        }
 
+        private void initializeViewModels()
+        {
         }
     }
 }

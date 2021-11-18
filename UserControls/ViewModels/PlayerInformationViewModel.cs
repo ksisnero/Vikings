@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Windows.Threading;
 using Vikings.UserControls.MockApi;
 using Vikings.UserControls.Objects;
 
@@ -10,51 +8,28 @@ namespace Vikings.UserControls.ViewModels
     public class PlayerInformationViewModel
     {
         private PlayerApi _playerApi;
+        private PlayerFile _playerFile;
         public virtual Player Player { get; set; }
-        public List<State> States { get; set; }
 
         public PlayerInformationViewModel()
         {
             _playerApi = new PlayerApi();
+            _playerFile = _playerApi.GetPlayerFile();
+            if (_playerFile == null) return;
 
-            GetStates();
+            Player = _playerFile.Player;
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer = new DispatcherTimer();
+            timer.Interval = new TimeSpan(0, 0, 15);
+            timer.Tick += new EventHandler(Update);
+            timer.Start();
         }
 
-        public void Update()
+        private void Update(object state, EventArgs e)
         {
-            //every minute? it will save player information and update the xml/json
-        }
-
-        public void SaveCurrentPlayer()
-        {
-            //_playerApi.SavePlayerFile(Player);
-        }
-
-        public void ImportPlayer()
-        {
-            //there will be a button to generate player xml/json
-            //this method will import player
-        }
-
-        public void GetStates()
-        {
-            //if (Player == null) return;
-            //States = Player.CurrentState;
-
-            States = Enum.GetValues(typeof(State)).Cast<State>().ToList();
-
-            var currentPlayerState = new List<CurrentState>() {
-                new CurrentState
-                {
-                    State = State.Bleeding,
-                    StateValue = true
-                },
-                new CurrentState
-                {
-                    State = State.Frozen,
-                    StateValue = true
-                }
-            };
+            _playerFile.Player = Player;
+            _playerApi.SavePlayerFile(_playerFile);
         }
     }
 }

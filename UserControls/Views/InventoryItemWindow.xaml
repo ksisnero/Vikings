@@ -4,33 +4,213 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="NewInventoryItemWindow" Height="300" Width="400">
-    <Grid Margin="5,5,5,5">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="24"/>
-        </Grid.RowDefinitions>
+        Title="NewInventoryItemWindow" SizeToContent="WidthAndHeight" Width="500" >
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="boolToVis" />
+    </Window.Resources>
 
-        <Label Grid.ColumnSpan="2" Content="Add New Inventory Item" HorizontalAlignment="Center"/>
-        <Label Grid.Row="1" Content="Item Name:" Margin="5,0,0,0" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
-        <TextBox Grid.Row="1" Grid.Column="1" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Stretch" Margin="5,2,5,5"/>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="27"/>
+            </Grid.RowDefinitions>
 
-        <Label Grid.Row="2" Content="Quantity:" Margin="5,0,0,0" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
-        <TextBox Grid.Row="2" Grid.Column="1" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Stretch" Margin="5,2,5,5"/>
+            <Label Grid.ColumnSpan="2" Content="Add New Inventory Item" HorizontalAlignment="Center" Margin="10" FontSize="16"/>
+            <Label Grid.Row="1" Content="Item Name:" Margin="5,0,0,0" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding ItemName}" TextWrapping="Wrap" VerticalAlignment="Stretch" Margin="5,2,5,5" VerticalContentAlignment="Center"/>
 
-        <Label Grid.Row="3" Content="Notes:" Margin="5,0,0,0" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
-        <TextBox Grid.Row="3" Grid.Column="1" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Stretch" Margin="5,5,5,5"/>
+            <Label Grid.Row="2" Content="Quantity:" Margin="5,0,0,0" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Quantity}" TextWrapping="Wrap" VerticalAlignment="Stretch" Margin="5,2,5,5" VerticalContentAlignment="Center"/>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right">
-            <Button Content="Save" Width="60" Margin="5,0,5,0" Background="#FF11B018"/>
-            <Button Content="Cancel" Width="60" Margin="5,0,5,0"/>
-        </StackPanel>
-    </Grid>
+            <Label Grid.Row="3" Content="Notes:" Margin="5,0,0,0" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
+            <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Notes}" TextWrapping="Wrap" VerticalAlignment="Stretch" Margin="5,2,5,5" VerticalContentAlignment="Top"/>
+
+            <Label Grid.Row="4" Content="Equipment:" Margin="5,0,0,0" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
+            <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal" Margin="5">
+                <RadioButton GroupName="EquipmentType" IsChecked="{Binding isArmor}">Armor</RadioButton>
+                <RadioButton GroupName="EquipmentType" IsChecked="{Binding isWeapon}" Margin="20,0,0,0">Weapon</RadioButton>
+                <RadioButton GroupName="EquipmentType" IsChecked="True" Margin="20,0,0,0">None</RadioButton>
+            </StackPanel>
+
+            <StackPanel Grid.Row="5" Grid.Column="1" Visibility="{Binding isArmor, Converter={StaticResource boolToVis}}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Item Description"/>
+                    <TextBox Text="{Binding Equipment.Armor.ItemName}" Grid.Column="1" HorizontalContentAlignment="Stretch" Margin="0,2,0,2"/>
+
+                    <Label Content="Armor Set" Grid.Row="1" />
+                    <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+                        <TextBox Text="{Binding Equipment.Armor.ArmorSet}" Width="50" Margin="0,2,0,2"/>
+                        <TextBlock Text=" / " VerticalAlignment="Center" />
+                        <TextBox Text="{Binding Equipment.Armor.ArmorSetTotal}" Width="50" Margin="0,2,0,2"/>
+                    </StackPanel>
+
+                    <Label Content="Special Item" Margin="0,0,11,0" Grid.Row="2"/>
+                    <CheckBox IsChecked="{Binding Equipment.Armor.SpecialItem}" Padding="5" VerticalContentAlignment="Center" Grid.Row="2" Grid.Column="1" />
+
+                    <Label Content="Effects" Margin="0,0,11,0" Grid.Row="3"/>
+
+                    <Grid Grid.Row="3" Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Content="Effect:" Grid.Row="1"/>
+                        <ComboBox Grid.Column="1" Grid.Row="1" />
+
+                        <Label Content="Modification:" Grid.Row="2"/>
+                        <TextBox Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="1" Margin="0,2,0,2"/>
+
+                        <Button Grid.Row="3" Grid.Column="1" Content="Add"/>
+
+                        <DataGrid Grid.Row="4" Grid.ColumnSpan="2" AutoGenerateColumns="False" Width="Auto" Margin="0,5,0,5">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Effect Name" />
+                                <DataGridTextColumn Header="Effect Modification" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+
+                    <Label Content="Set Completion Bonus" Margin="0,0,11,0" Grid.Row="4"/>
+                    <Grid Grid.Row="4" Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Content="Effect:" Grid.Row="1"/>
+                        <ComboBox Grid.Column="1" Grid.Row="1"/>
+
+                        <Label Content="Modification:" Grid.Row="2"/>
+                        <TextBox Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="1" Margin="0,2,0,2"/>
+
+                        <DataGrid Grid.Row="3" Grid.ColumnSpan="2" AutoGenerateColumns="False" Width="Auto" Margin="0,5,0,5">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Effect Name" />
+                                <DataGridTextColumn Header="Effect Modification" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+
+                    <Label Content="Armor Class" Margin="0,0,11,0" Grid.Row="5"/>
+                    <ComboBox Grid.Row="5" Grid.Column="1" />
+                </Grid>
+            </StackPanel>
+
+            <StackPanel Grid.Row="7" Grid.Column="1" Visibility="{Binding isWeapon, Converter={StaticResource boolToVis}}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Item Description"/>
+                    <TextBox Grid.Column="1" HorizontalContentAlignment="Stretch" Margin="0,2,0,2"/>
+
+                    <Label Content="Damage Boost" Grid.Row="1" />
+                    <TextBox Grid.Column="1" HorizontalContentAlignment="Stretch" Margin="0,2,0,2" Grid.Row="1"/>
+
+                    <Label Content="Energy Cost" Grid.Row="2" />
+                    <TextBox Grid.Column="1" HorizontalContentAlignment="Stretch" Margin="0,2,0,2" Grid.Row="2"/>
+
+                    <Label Content="Range" Grid.Row="3" />
+                    <TextBox Grid.Column="1" HorizontalContentAlignment="Stretch" Margin="0,2,0,2" Grid.Row="3"/>
+
+                    <Label Content="Special Item" Margin="0,0,11,0" Grid.Row="4"/>
+                    <CheckBox Padding="5" VerticalContentAlignment="Center" Grid.Row="4" Grid.Column="1" />
+
+                    <Label Content="One-handed" Margin="0,0,11,0" Grid.Row="5"/>
+                    <CheckBox Padding="5" VerticalContentAlignment="Center" Grid.Row="5" Grid.Column="1" />
+
+                    <Label Content="Effects" Margin="0,0,11,0" Grid.Row="6"/>
+                    <Grid Grid.Row="6" Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Content="Effect:" Grid.Row="1"/>
+                        <ComboBox Grid.Column="1" Grid.Row="1"/>
+
+                        <Label Content="Modification:" Grid.Row="2"/>
+                        <TextBox Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="1" Margin="0,2,0,2"/>
+
+                        <Button Grid.Row="3" Grid.Column="1" Content="Add"/>
+
+                        <DataGrid Grid.Row="4" Grid.ColumnSpan="2" AutoGenerateColumns="False" Width="Auto" Margin="0,5,0,5">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Effect Name" />
+                                <DataGridTextColumn Header="Effect Modification" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </Grid>
+            </StackPanel>
+
+            <Rectangle Stroke="Gray" HorizontalAlignment='Stretch' Grid.Row="8" Height="1" Width="Auto" Grid.ColumnSpan="2"  Margin="0,10,0,10"/>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="9" Grid.Column="1" HorizontalAlignment="Right">
+                <Button Content="Save" Width="60" Margin="5,0,5,0" Background="#FF11B018" Command="{Binding SaveCommand}"/>
+                <Button Content="Cancel" Width="60" Margin="5,0,5,0" Click="Cancel"/>
+            </StackPanel>
+        </Grid>
+
+    </ScrollViewer>
 </Window>

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "I/oWlyWqsAn0RiRXOtZP9Zta55dW1c06QRc00KKYKLpS682SSDFouaZFMwmcxiqHN5HJHUWE2FjNV9QFiGD22g==",
+  "dgSpecHash": "ZsXPgpjPgyKy7ORLYXQzt2p9dD2cINDICXhMHIs602+5lsl1xwNnO+RGpdxfdBtQScrBfwcP52X6ETX7lzi/4Q==",
   "success": true,
   "projectFilePath": "D:\\Desktop\\Vikings\\Vikings.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,8 @@
     "C:\\Users\\Karina\\.nuget\\packages\\microsoft.netcore.dotnethostresolver\\2.2.8\\microsoft.netcore.dotnethostresolver.2.2.8.nupkg.sha512",
     "C:\\Users\\Karina\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.2\\microsoft.netcore.platforms.5.0.2.nupkg.sha512",
     "C:\\Users\\Karina\\.nuget\\packages\\microsoft.netcore.targets\\5.0.0\\microsoft.netcore.targets.5.0.0.nupkg.sha512",
+    "C:\\Users\\Karina\\.nuget\\packages\\microsoft.toolkit\\7.0.2\\microsoft.toolkit.7.0.2.nupkg.sha512",
+    "C:\\Users\\Karina\\.nuget\\packages\\microsoft.toolkit.parsers\\6.1.1\\microsoft.toolkit.parsers.6.1.1.nupkg.sha512",
     "C:\\Users\\Karina\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\Karina\\.nuget\\packages\\system.runtime\\4.3.1\\system.runtime.4.3.1.nupkg.sha512"
   ],

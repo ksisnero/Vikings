@@ -6,154 +6,235 @@
              xmlns:local="clr-namespace:Vikings.UserControls.Views"
              mc:Ignorable="d" 
              Background="White">
+
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <Label Content="Acrobatics" VerticalAlignment="Top"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="Animal Care" VerticalAlignment="Top" Grid.Row="1"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="Dueling" VerticalAlignment="Top" Grid.Row="2"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="Atheltics" VerticalAlignment="Top" Grid.Row="3"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="Clan" VerticalAlignment="Top" Grid.Row="4"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="Deception" VerticalAlignment="Top" Grid.Row="5"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="5" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="History" VerticalAlignment="Top" Grid.Row="6"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="6" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="Intimidation" VerticalAlignment="Top" Grid.Row="7"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="7" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="Investigation" VerticalAlignment="Top" Grid.Row="8"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="8" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="Medicine" VerticalAlignment="Top" Grid.Row="9"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="9" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="Nature" VerticalAlignment="Top" Grid.Row="10"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="10" Padding="8,5,8,5" Margin="2" />
+
+        <Label Content="Musical Talent" VerticalAlignment="Top" Grid.Row="11"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="11" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="Persuasion" VerticalAlignment="Top" Grid.Row="12"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="12" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="Survival" VerticalAlignment="Top" Grid.Row="13"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="13" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="Stealth" VerticalAlignment="Top" Grid.Row="14"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="14" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="Sleight of Hand" VerticalAlignment="Top" Grid.Row="15"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="15" Padding="8,5,8,5" Margin="2"/>
+
+        <Label Content="First Aid" VerticalAlignment="Top" Grid.Row="16"/>
+        <TextBox Text="3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="16" Padding="8,5,8,5" Margin="2"/>
+    </Grid>
+    
+    
+    
+    <!--<Grid>
         <StackPanel Orientation="Vertical">
             <Label Content="Skills (cap 10)" BorderBrush="Black" BorderThickness="1" Background="#FFB6D7A8" HorizontalContentAlignment="Center"/>
             <WrapPanel Orientation="Horizontal" MaxWidth="873" Margin="0,-1,0,0" >
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Acrobatics-->
+                    --><!--Acrobatics--><!--
                     <Label Content="Acrobatics" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FFCFE2F3" />
-                    <TextBox TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Text="1" Margin="0,-1,0,0" />
-                    <TextBox TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Text="1" Margin="0,-1,0,0" />
-                    <TextBox TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Text="1" Margin="0,-1,0,0" />
+                    <TextBox Text="{Binding Skills.Acrobatics.BaseSkillPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="0,-1,0,0" />
+                    <TextBox Text="{Binding Skills.Acrobatics.SkillModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="0,-1,0,0" />
+                    <TextBox Text="{Binding Skills.Acrobatics.TotalSkillPoints}" Background="LightBlue" Focusable="False" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="0,-1,0,0" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" />
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Animal Care-->
+                    --><!--Animal Care--><!--
                     <Label Content="Animal Care" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FFCFE2F3" Margin="-1,0,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.AnimalCare.BaseSkillPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.AnimalCare.SkillModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.AnimalCare.TotalSkillPoints}" Background="LightBlue" Focusable="False" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Dueling-->
+                    --><!--Dueling--><!--
                     <Label Content="Dueling" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FFCFE2F3" Margin="-1,0,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Dueling.BaseSkillPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Dueling.SkillModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Dueling.TotalSkillPoints}" Background="LightBlue" Focusable="False" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Atheltics-->
+                    --><!--Atheltics--><!--
                     <Label Content="Atheltics" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FFCFE2F3" Margin="-1,0,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Atheltics.BaseSkillPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Atheltics.SkillModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Atheltics.TotalSkillPoints}" Background="LightBlue" Focusable="False" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Clan-->
+                    --><!--Clan--><!--
                     <Label Content="Clan" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FFCFE2F3" Margin="-1,0,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Clan.BaseSkillPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Clan.SkillModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Clan.TotalSkillPoints}" Background="LightBlue" Focusable="False" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Deception-->
+                    --><!--Deception--><!--
                     <Label Content="Deception" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FFCFE2F3" Margin="-1,0,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Deception.BaseSkillPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Deception.SkillModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Deception.TotalSkillPoints}" Background="LightBlue" Focusable="False" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--History-->
+                    --><!--History--><!--
                     <Label Content="History" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FFCFE2F3" Margin="-1,0,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.History.BaseSkillPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.History.SkillModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.History.TotalSkillPoints}" Background="LightBlue" Focusable="False" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Intimidation-->
+                    --><!--Intimidation--><!--
                     <Label Content="Intimidation" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FFCFE2F3" Margin="-1,0,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Intimidation.BaseSkillPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Intimidation.SkillModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Intimidation.TotalSkillPoints}" Background="LightBlue" Focusable="False" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97" MinWidth="85">
-                    <!--Investigation-->
+                    --><!--Investigation--><!--
                     <Label Content="Investigation" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FFCFE2F3" Margin="-1,0,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Investigation.BaseSkillPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Investigation.SkillModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Investigation.TotalSkillPoints}" Background="LightBlue" Focusable="False" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Medicine-->
+                    --><!--Medicine--><!--
                     <Label Content="Medicine" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FFCFE2F3" Margin="0,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="0,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="0,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="0,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Medicine.BaseSkillPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="0,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Medicine.SkillModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="0,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Medicine.TotalSkillPoints}" Background="LightBlue" Focusable="False" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="0,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Nature-->
+                    --><!--Nature--><!--
                     <Label Content="Nature" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FFCFE2F3" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Nature.BaseSkillPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Nature.SkillModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Nature.TotalSkillPoints}" Background="LightBlue" Focusable="False" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Musical Talent-->
+                    --><!--Musical Talent--><!--
                     <Label Content="Musical Talent" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FFCFE2F3" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.MusicalTalent.BaseSkillPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.MusicalTalent.SkillModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.MusicalTalent.TotalSkillPoints}" Background="LightBlue" Focusable="False" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Persuasion-->
+                    --><!--Persuasion--><!--
                     <Label Content="Persuasion" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FFCFE2F3" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Persuasion.BaseSkillPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Persuasion.SkillModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Persuasion.TotalSkillPoints}" Background="LightBlue" Focusable="False" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Survival-->
+                    --><!--Survival--><!--
                     <Label Content="Survival" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FFCFE2F3" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Survival.BaseSkillPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Survival.SkillModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Survival.TotalSkillPoints}" Background="LightBlue" Focusable="False" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Stealth-->
+                    --><!--Stealth--><!--
                     <Label Content="Stealth" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FFCFE2F3" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Stealth.BaseSkillPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Stealth.SkillModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.Stealth.TotalSkillPoints}" Background="LightBlue" Focusable="False" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Sleight of Hand-->
+                    --><!--Sleight of Hand--><!--
                     <Label Content="Sleight of Hand" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FFCFE2F3" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.SleightOfHand.BaseSkillPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.SleightOfHand.SkillModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.SleightOfHand.TotalSkillPoints}" Background="LightBlue" Focusable="False" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--First Aid-->
+                    --><!--First Aid--><!--
                     <Label Content="First Aid" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#FFCFE2F3" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.FirstAid.BaseSkillPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.FirstAid.SkillModifications}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.FirstAid.TotalSkillPoints}" Background="LightBlue" Focusable="False" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="97">
-                    <!--Available-->
+                    --><!--Available--><!--
                     <Label Content="Skill Points" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" FontWeight="Bold" Background="#FF6AA84F" Margin="-1,-1,0,0" />
                     <TextBox Text="Spend 10" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Background="#FFB6D7A8" Margin="-1,-1,0,0"/>
-                    <TextBox Text="1" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0" />
-                    <TextBox TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" IsReadOnly="True" Margin="-1,-1,0,0"/>
+                    <TextBox Text="{Binding Skills.SpendableSkillPoints}" TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" VerticalContentAlignment="Center" Margin="-1,-1,0,0" />
+                    <TextBox TextAlignment="Center" VerticalAlignment="Stretch" BorderBrush="Black" Focusable="False" VerticalContentAlignment="Center" IsReadOnly="True" Margin="-1,-1,0,0"/>
                 </StackPanel>
             </WrapPanel>
         </StackPanel>
-    </Grid>
+    </Grid>-->
 </UserControl>
